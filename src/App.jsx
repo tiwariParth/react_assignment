@@ -36,7 +36,7 @@ const App = () => {
   };
 
   return (
-    <div className="h-screen flex justify-between items-center gap-10">
+    <div className="h-screen flex flex-col lg:flex-row  justify-between items-center gap-10">
       <div className="flex justify-center h-full items-center w-full">
         <div className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
           <p className="mb-3 font-normal text-gray-200">{data}</p>
@@ -63,11 +63,11 @@ const App = () => {
           </button>
         </div>
       </div>
-      <div className="mt-4 self-start h-full px-4 w-[50%] shadow-2xl">
-        <h2 className="text-lg font-bold text-gray-700 border-b-2 p-3">
+      <div className="mt-4 self-start h-full px-4 w-full lg:w-[50%] shadow-2xl overflow-scroll md:overflow-auto mb-10 lg:mb-auto">
+        <h2 className="text-lg font-bold text-gray-700 border-b-2 p-3 sticky ">
           Saved Quotes
         </h2>
-        <ul className="list-disc pl-5 flex flex-col gap-2 mt-4">
+        <ul className="list-disc pl-5 flex flex-col gap-2 mt-5">
           {savedQuotes.map((quote, index) => (
             <li
               key={index}
